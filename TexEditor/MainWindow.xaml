@@ -1,0 +1,33 @@
+﻿<Window x:Class="TexEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TexEditor"
+        mc:Ignorable="d"
+        Title="FireFly Tex Decompiler" Height="348" Width="420" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Name="TxbFilePath" Margin="8" Text="" TextWrapping="Wrap" IsReadOnly="True" MouseDoubleClick="TxbFilePath_MouseDoubleClick"/>
+            <TextBox Grid.Row="1" Name="TxbFileSection" Margin="8" Text="261" TextWrapping="Wrap"/>
+            <Button Grid.Row="2" Margin="15 5 15 5" Content="Convert" Click="BtnFileSelect_Click"/>
+            <TextBlock Grid.Row="3" TextWrapping="WrapWithOverflow" Margin="5,5,5,5">
+                1. The secound textbox should input right section num for the tex file.
+                <LineBreak />2. Double click first input to select a tex file and click "Convert" the text file will be generated at same folder.
+                <LineBreak />3. For Stronghold Crusader Extreme is 261
+                <LineBreak />4. For Space Colony (Steam Edition) is 251
+            </TextBlock>
+        </Grid>
+    </Grid>
+</Window>
